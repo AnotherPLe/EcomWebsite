@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang="product.title">Chi tiết sản phẩm - Ecomple</title>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="/css/common.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #004F44 0%, #00332A 100%);
+            font-family: 'Nunito', sans-serif;
+            color: #EFF7F5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            background: rgba(0,0,0,0.1);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(10px);
+        }
+        .logo {
+            font-family: 'Paytone One', sans-serif;
+            font-size: 24px;
+            color: #EFF7F5;
+        }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        .nav-links a {
+            color: #EFF7F5;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        .nav-links a:hover {
+            background: rgba(239, 247, 245, 0.2);
+            transform: translateY(-2px);
+        }
+        .container {
+            flex: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px 20px 20px;
+            background: rgba(0,0,0,0.05);
+            border-radius: 16px;
+            margin-top: 40px;
+        }
+        .product-title {
+            font-family: 'Paytone One', sans-serif;
+            font-size: 36px;
+            margin-bottom: 30px;
+            text-align: center;
+            background: linear-gradient(45deg, #EFF7F5, #B8E6FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        .product-title i {
+            color: #B8E6FF;
+            font-size: 32px;
+        }
+        .product-detail {
+            background: #EFF7F5;
+            color: #004F44;
+            border-radius: 12px;
+            padding: 32px 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .product-detail img {
+            width: 100%;
+            max-width: 320px;
+            height: auto;
+            display: block;
+            margin: 0 auto 24px auto;
+            border-radius: 8px;
+        }
+        .product-detail h2 {
+            margin-top: 0;
+            font-size: 24px;
+        }
+        .product-detail p {
+            margin: 8px 0;
+            font-size: 16px;
+        }
+        .back-btn {
+            margin-bottom: 24px;
+            background: transparent;
+            border: 2px solid #EFF7F5;
+            color: #EFF7F5;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 700;
+            transition: all 0.2s;
+        }
+        .back-btn:hover {
+            background: rgba(239, 247, 245, 0.1);
+            transform: translateY(-2px);
+        }
+        .amazon-link {
+            display: inline-flex;
+            align-items: center;
+            background: #FF9900;
+            color: #000;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 14px;
+            margin: 16px 0;
+            transition: all 0.2s;
+            width: fit-content;
+        }
+        .amazon-link:hover {
+            background: #E88A00;
+            transform: translateY(-2px);
+        }
+        .amazon-link img {
+            width: 16px;
+            height: 16px;
+            margin-right: 6px;
+        }
+        .product-info {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .product-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        .product-title-section {
+            flex: 1;
+        }
+        .language-switcher {
+            display: flex;
+            gap: 8px;
+            margin-left: auto;
+        }
+        .language-btn {
+            background: transparent;
+            border: 1px solid #EFF7F5;
+            color: #EFF7F5;
+            padding: 4px 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+        .language-btn:hover {
+            background: rgba(239, 247, 245, 0.1);
+        }
+        .language-btn.active {
+            background: #EFF7F5;
+            color: #004F44;
+        }
+    </style>
+</head>
+<body>
+    <nav class="header">
+        <div class="logo">Ecomple</div>
+        <div class="nav-links">
+            <a href="/index.html">Trang chủ</a>
+            <a href="/search.html">Tìm kiếm</a>
+            <a href="/gioi_thieu.html">Giới thiệu</a>
+            <a href="/amazon_dashboard.html">Amazon Dashboard</a>
+            <a href="/huong_dan_su_dung.html">Hướng dẫn</a>
+            <a href="/contact.html">Liên hệ</a>
+        </div>
+    </nav>
+    <div class="container">
+        <button class="back-btn" onclick="window.history.back()">← Quay lại</button>
+        <h1 class="product-title">
+            <i class="fas fa-info-circle"></i>
+            Chi tiết sản phẩm
+        </h1>
+        <div id="productDetail" class="product-detail">
+            <a id="amazon-link" href="#" target="_blank">Xem trên Amazon</a>
+        </div>
+    </div>
+    <div style="opacity: 0.25; color: white; font-size: 12px; font-family: Nunito; font-style: italic; font-weight: 500; letter-spacing: 0.30px; word-wrap: break-word; text-align: center; margin-bottom: 24px;">2025 - plEcomver1.0.0 - Le Nguyen Truong Phuoc - All right reserved</div>
+    <script>
+        function getASINFromURL() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('asin');
+        }
+        function renderDetail(product) {
+            let html = '';
+            html += '<div class="product-header">';
+            if (product.Image_URL) {
+                html += `<div style=\"display:flex;flex-direction:column;align-items:center;\">`;
+                html += `<img src="${product.Image_URL}" alt="${product.Product_Name}">`;
+                html += `</div>`;
+            }
+            html += '<div class="product-title-section">';
+            html += `<h2>${product.Product_Name || 'Không có tên'}</h2>`;
+            html += '</div></div>';
+            
+            html += '<div class="product-info">';
+            if (product.customer_price !== null && product.customer_price !== undefined) {
+                html += `<p><strong>Giá:</strong> ${product.customer_price.toLocaleString()} USD</p>`;
+            }
+            if (product.Sub_Department) {
+                html += `<p><strong>Ngành:</strong> ${product.Sub_Department}</p>`;
+            }
+            if (product.Overall_Rating !== null && product.Overall_Rating !== undefined) {
+                html += `<p><strong>Đánh giá trung bình:</strong> ${product.Overall_Rating}</p>`;
+            }
+            if (product.Review_Count !== null && product.Review_Count !== undefined) {
+                html += `<p><strong>Số đánh giá:</strong> ${product.Review_Count}</p>`;
+            }
+            if (product.Color) {
+                html += `<p><strong>Màu sắc:</strong> ${product.Color}</p>`;
+            }
+            if (product.Weight !== null && product.Weight !== undefined) {
+                html += `<p><strong>Khối lượng:</strong> ${product.Weight}</p>`;
+            }
+            if (product.Volumn !== null && product.Volumn !== undefined) {
+                html += `<p><strong>Thể tích:</strong> ${product.Volumn}</p>`;
+            }
+            if (product.ProductSizeTier) {
+                html += `<p><strong>Kích thước:</strong> ${product.ProductSizeTier}</p>`;
+            }
+            if (product.MainRankingValue !== null && product.MainRankingValue !== undefined) {
+                html += `<p><strong>Xếp hạng chính:</strong> ${product.MainRankingValue}</p>`;
+            }
+            if (product.Delivery_time_days !== null && product.Delivery_time_days !== undefined) {
+                html += `<p><strong>Thời gian giao hàng (ngày):</strong> ${product.Delivery_time_days}</p>`;
+            }
+            if (product.AmazonGlobal_Shipping !== null && product.AmazonGlobal_Shipping !== undefined) {
+                html += `<p><strong>Amazon Global Shipping:</strong> ${product.AmazonGlobal_Shipping}</p>`;
+            }
+            if (product.Estimated_Import_Charge !== null && product.Estimated_Import_Charge !== undefined) {
+                html += `<p><strong>Phí nhập khẩu ước tính:</strong> ${product.Estimated_Import_Charge}</p>`;
+            }
+            if (product.PriceGroup) {
+                html += `<p><strong>Nhóm giá:</strong> ${product.PriceGroup}</p>`;
+            }
+            if (product.Description) {
+                let description = product.Description;
+                html += `<div style="margin-top: 20px;"><strong>Mô tả:</strong></div>`;
+                try {
+                    // Thử parse JSON array
+                    const arr = JSON.parse(description.replace(/'/g, '"'));
+                    if (Array.isArray(arr) && arr.length > 0) {
+                        html += `<ul style="margin: 10px 0; padding-left: 20px;">`;
+                        arr.forEach(item => {
+                            html += `<li style="margin-bottom: 8px; line-height: 1.4;">${item}</li>`;
+                        });
+                        html += `</ul>`;
+                    } else {
+                        html += `<p style="margin: 10px 0; line-height: 1.6;">${description}</p>`;
+                    }
+                } catch (e) {
+                    // Nếu không parse được, hiển thị dạng chuỗi và tách theo dấu phẩy
+                    if (description.includes(',')) {
+                        const items = description.split(',').map(item => item.trim());
+                        html += `<ul style="margin: 10px 0; padding-left: 20px;">`;
+                        items.forEach(item => {
+                            if (item) {
+                                html += `<li style="margin-bottom: 8px; line-height: 1.4;">${item}</li>`;
+                            }
+                        });
+                        html += `</ul>`;
+                    } else {
+                        html += `<p style="margin: 10px 0; line-height: 1.6;">${description}</p>`;
+                    }
+                }
+            }
+            html += '</div>';
+            if (product.amazon_link) {
+                html += `<div style="display:flex;justify-content:center;margin-top:24px;">
+                    <a href="${product.amazon_link}" target="_blank" class="amazon-link" style="font-size:16px;padding:12px 24px;">
+                        <img src="https://www.amazon.com/favicon.ico" alt="Amazon" style="width:20px;height:20px;margin-right:8px;vertical-align:middle;">
+                        <span>Xem sản phẩm trên Amazon</span>
+                    </a>
+                </div>`;
+            }
+            document.getElementById('productDetail').innerHTML = html;
+        }
+        async function fetchProductDetail() {
+            const asin = getASINFromURL();
+            if (!asin) {
+                document.getElementById('productDetail').innerHTML = '<p>Không tìm thấy sản phẩm.</p>';
+                return;
+            }
+            try {
+                const res = await fetch(`http://localhost:3001/api/product/${asin}`);
+                if (!res.ok) {
+                    document.getElementById('productDetail').innerHTML = '<p>Không tìm thấy sản phẩm.</p>';
+                    return;
+                }
+                const product = await res.json();
+                // Render giao diện đẹp
+                try {
+                    renderDetail(product);
+                } catch (err) {
+                    document.getElementById('productDetail').innerHTML = `<div style='color:red;margin-top:12px;'>Lỗi khi render: ${err.message}</div>`;
+                }
+            } catch (e) {
+                document.getElementById('productDetail').innerHTML = `<p>Có lỗi xảy ra khi tải chi tiết sản phẩm: ${e.message}</p>`;
+            }
+        }
+        fetchProductDetail();
+    </script>
+</body>
+</html> 

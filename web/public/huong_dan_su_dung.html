@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hướng dẫn sử dụng - Ecomple</title>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/home.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #004F44 0%, #00332A 100%);
+            font-family: 'Nunito', sans-serif;
+            color: #EFF7F5;
+            min-height: 100vh;
+        }
+        .header {
+            background: rgba(0,0,0,0.1);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(10px);
+        }
+        .logo {
+            font-family: 'Paytone One', sans-serif;
+            font-size: 24px;
+            color: #EFF7F5;
+        }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        .nav-links a {
+            color: #EFF7F5;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        .nav-links a:hover {
+            background: rgba(239, 247, 245, 0.2);
+            transform: translateY(-2px);
+        }
+        .nav-links a.active {
+            background: rgba(239, 247, 245, 0.3);
+        }
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .page-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .page-title h1 {
+            font-family: 'Paytone One', sans-serif;
+            font-size: 48px;
+            margin: 0;
+            background: linear-gradient(45deg, #EFF7F5, #B8E6FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .page-title p {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-top: 10px;
+        }
+        .guide-section {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(239, 247, 245, 0.2);
+        }
+        .guide-section h2 {
+            font-family: 'Paytone One', sans-serif;
+            font-size: 28px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .guide-section h2 i {
+            color: #B8E6FF;
+            font-size: 32px;
+        }
+        .guide-section h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin: 25px 0 15px 0;
+            color: #B8E6FF;
+        }
+        .guide-section p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .guide-section ul {
+            padding-left: 20px;
+        }
+        .guide-section li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        .feature-card {
+            background: rgba(184, 230, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            border: 1px solid rgba(184, 230, 255, 0.3);
+            transition: transform 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        .feature-card i {
+            font-size: 40px;
+            color: #B8E6FF;
+            margin-bottom: 15px;
+        }
+        .feature-card h4 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .cta-section {
+            text-align: center;
+            background: linear-gradient(45deg, rgba(184, 230, 255, 0.2), rgba(239, 247, 245, 0.2));
+            border-radius: 20px;
+            padding: 40px;
+            margin-top: 40px;
+        }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #B8E6FF, #EFF7F5);
+            color: #004F44;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 18px;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(184, 230, 255, 0.3);
+        }
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            opacity: 0.7;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <nav class="header">
+        <div class="logo">Ecomple</div>
+        <div class="nav-links">
+            <a href="index.html">Trang chủ</a>
+            <a href="search.html">Tìm kiếm</a>
+            <a href="gioi_thieu.html">Giới thiệu</a>
+            <a href="amazon_dashboard.html">Amazon Dashboard</a>
+            <a href="huong_dan_su_dung.html" class="active">Hướng dẫn</a>
+            <a href="contact.html">Liên hệ</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="page-title">
+            <h1>Hướng dẫn sử dụng</h1>
+            <p>Khám phá toàn bộ tính năng của Ecomple - Công cụ tìm kiếm sản phẩm Amazon thông minh</p>
+        </div>
+
+        <div class="guide-section">
+            <h2><i class="fas fa-info-circle"></i>Giới thiệu về Ecomple</h2>
+            <p>Ecomple là một nền tảng tìm kiếm và phân tích sản phẩm Amazon được thiết kế để giúp người dùng Việt Nam dễ dàng khám phá và so sánh hàng triệu sản phẩm từ Amazon. Với giao diện thân thiện và các tính năng phân tích chi tiết, Ecomple giúp bạn đưa ra quyết định mua sắm thông minh.</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-search"></i>
+                    <h4>Tìm kiếm thông minh</h4>
+                    <p>Tìm kiếm sản phẩm theo từ khóa, danh mục, và nhiều tiêu chí khác</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-chart-bar"></i>
+                    <h4>Phân tích chi tiết</h4>
+                    <p>Xem thông tin đầy đủ về giá cả, đánh giá, và thông số kỹ thuật</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-link"></i>
+                    <h4>Liên kết trực tiếp</h4>
+                    <p>Chuyển đến Amazon chỉ với một cú click để mua hàng</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="guide-section">
+            <h2><i class="fas fa-play-circle"></i>Bắt đầu sử dụng</h2>
+            
+            <h3>Bước 1: Tìm kiếm sản phẩm</h3>
+            <ul>
+                <li>Truy cập trang <strong>Tìm kiếm</strong> từ menu điều hướng</li>
+                <li>Nhập từ khóa sản phẩm bạn muốn tìm (ví dụ: "laptop", "điện thoại", "tai nghe")</li>
+                <li>Sử dụng bộ lọc để thu hẹp kết quả:
+                    <ul>
+                        <li><strong>Danh mục:</strong> Chọn danh mục sản phẩm cụ thể</li>
+                        <li><strong>Nhóm giá:</strong> Lọc theo mức giá phù hợp</li>
+                    </ul>
+                </li>
+                <li>Nhấn nút "Tìm kiếm" để xem kết quả</li>
+            </ul>
+
+            <h3>Bước 2: Xem chi tiết sản phẩm</h3>
+            <ul>
+                <li>Click vào bất kỳ sản phẩm nào trong kết quả tìm kiếm</li>
+                <li>Xem thông tin chi tiết bao gồm:
+                    <ul>
+                        <li>Hình ảnh sản phẩm chất lượng cao</li>
+                        <li>Tên và mô tả chi tiết</li>
+                        <li>Giá cả và đánh giá từ người dùng</li>
+                        <li>Thông số kỹ thuật (kích thước, trọng lượng, màu sắc)</li>
+                        <li>Thông tin vận chuyển và phí nhập khẩu</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Bước 3: Mua sản phẩm trên Amazon</h3>
+            <ul>
+                <li>Sau khi xem chi tiết, click nút <strong>"Xem sản phẩm trên Amazon"</strong></li>
+                <li>Hệ thống sẽ chuyển bạn đến trang sản phẩm chính thức trên Amazon</li>
+                <li>Thực hiện mua hàng theo quy trình của Amazon</li>
+            </ul>
+        </div>
+
+        <div class="guide-section">
+            <h2><i class="fas fa-lightbulb"></i>Mẹo sử dụng hiệu quả</h2>
+            
+            <h3>Tối ưu hóa tìm kiếm</h3>
+            <ul>
+                <li><strong>Sử dụng từ khóa cụ thể:</strong> Thay vì "điện thoại", hãy tìm "iPhone 15 Pro Max"</li>
+                <li><strong>Kết hợp bộ lọc:</strong> Sử dụng cả danh mục và nhóm giá để tìm chính xác</li>
+                <li><strong>Đọc mô tả kỹ:</strong> Kiểm tra thông số kỹ thuật trước khi quyết định</li>
+            </ul>
+
+            <h3>So sánh sản phẩm</h3>
+            <ul>
+                <li>Mở nhiều tab để so sánh các sản phẩm tương tự</li>
+                <li>Chú ý đến số lượng đánh giá và điểm trung bình</li>
+                <li>Xem xét thời gian giao hàng và phí vận chuyển</li>
+            </ul>
+
+            <h3>Tiết kiệm chi phí</h3>
+            <ul>
+                <li>Sử dụng bộ lọc nhóm giá để tìm sản phẩm phù hợp túi tiền</li>
+                <li>Kiểm tra phí nhập khẩu ước tính trước khi mua</li>
+                <li>Theo dõi các sản phẩm có đánh giá cao với giá cả hợp lý</li>
+            </ul>
+        </div>
+
+        <div class="guide-section">
+            <h2><i class="fas fa-question-circle"></i>Câu hỏi thường gặp</h2>
+            
+            <h3>Ecomple có miễn phí không?</h3>
+            <p>Có, Ecomple hoàn toàn miễn phí. Bạn có thể tìm kiếm và xem thông tin sản phẩm không giới hạn.</p>
+
+            <h3>Tôi có thể mua hàng trực tiếp trên Ecomple không?</h3>
+            <p>Không, Ecomple chỉ là công cụ tìm kiếm và hiển thị thông tin. Để mua hàng, bạn sẽ được chuyển đến trang Amazon chính thức.</p>
+
+            <h3>Thông tin sản phẩm có được cập nhật thường xuyên không?</h3>
+            <p>Có, dữ liệu sản phẩm được đồng bộ định kỳ từ Amazon để đảm bảo tính chính xác và mới nhất.</p>
+
+            <h3>Tôi có thể tìm kiếm sản phẩm bằng tiếng Việt không?</h3>
+            <p>Có, bạn có thể sử dụng cả tiếng Việt và tiếng Anh để tìm kiếm sản phẩm.</p>
+        </div>
+
+        <div class="cta-section">
+            <h2>Bắt đầu khám phá ngay!</h2>
+            <p>Sẵn sàng tìm kiếm sản phẩm Amazon yêu thích của bạn?</p>
+            <a href="/search.html" class="cta-button">
+                <i class="fas fa-search"></i> Bắt đầu tìm kiếm
+            </a>
+            <a href="/index.html" class="cta-button">
+                <i class="fas fa-home"></i> Về trang chủ
+            </a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>2025 - plEcomver1.0.0 - Le Nguyen Truong Phuoc - All rights reserved</p>
+    </div>
+</body>
+</html> 

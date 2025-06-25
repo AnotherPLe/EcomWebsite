@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecomple - Tìm kiếm sản phẩm Amazon thông minh</title>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/home.css">
+    <style>
+        .tien-ich-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 32px; /* khoảng cách giữa các tiện ích */
+            flex-wrap: nowrap;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow-x: auto;
+        }
+
+        .feature-card {
+            min-width: 280px;
+            flex: 1 1 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="header">
+        <div class="logo">Ecomple</div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Trang chủ</a>
+            <a href="search.html">Tìm kiếm</a>
+            <a href="gioi_thieu.html">Giới thiệu</a>
+            <a href="amazon_dashboard.html">Amazon Dashboard</a>
+            <a href="huong_dan_su_dung.html">Hướng dẫn</a>
+            <a href="contact.html">Liên hệ</a>
+        </div>
+    </nav>
+
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1 class="title">Khám phá Amazon cùng Ecomple</h1>
+            <p class="subtitle">Tìm kiếm thông minh, so sánh chi tiết và mua sắm an toàn với hàng triệu sản phẩm từ Amazon</p>
+            <div class="buttons">
+                <button class="search-btn" onclick="window.location.href='search.html'">
+                    <i class="fas fa-search"></i>
+                    Bắt đầu tìm kiếm
+                </button>
+                <button class="dashboard-btn" onclick="window.location.href='amazon_dashboard.html'">
+                    <i class="fas fa-chart-line"></i>
+                    Xem Dashboard
+                </button>
+            </div>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <i class="fas fa-search"></i>
+                    <h3>Tìm kiếm thông minh</h3>
+                    <p>Công cụ tìm kiếm mạnh mẽ với bộ lọc chi tiết theo danh mục và giá cả</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Phân tích dữ liệu</h3>
+                    <p>Thống kê và biểu đồ trực quan về xu hướng sản phẩm trên Amazon</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Mua sắm an toàn</h3>
+                    <p>Đánh giá và xếp hạng sản phẩm từ người dùng thực tế</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2024 Ecomple - Tất cả quyền được bảo lưu</p>
+    </footer>
+</body>
+</html> 
